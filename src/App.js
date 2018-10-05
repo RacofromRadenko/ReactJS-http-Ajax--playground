@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Blog from '../src/containers/Blog/Blog';
 
 import './App.css';
 
 class App extends Component {
 	render() {
-		return <div className="App" />;
+		return (
+			<div className="App">
+				<Blog />
+			</div>
+		);
 	}
 }
 
