@@ -1,14 +1,14 @@
 import React from 'react';
 import classes from './Post.css';
 
-const post = () => {
+const post = (props) => {
 	return (
-		<div className={classes.Post}>
-			<div className={classes.Block}>
-				<h1>Title</h1>
-				<h2>Author</h2>
+		<article className={classes.Post} onClick={props.clicked}>
+			<h1>{props.title}</h1>
+			<div>
+				<h6 className={classes.Author}>Author</h6>
 			</div>
-		</div>
+		</article>
 	);
 };
 
