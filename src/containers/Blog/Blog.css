@@ -1,7 +1,25 @@
-.Posts {
-	display: flex;
+.Blog {
+	display: inline-flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	width: 80%;
+	width: 100%;
 	margin: auto;
+}
+
+.Blog ul {
+	display: inline-flex;
+	text-decoration-style: none;
+}
+
+.Blog li {
+	display: flex;
+	margin: 0 15px;
+}
+
+.Blog a {
+	text-decoration: none;
+}
+.Blog a:active {
+	color: #ffc422;
+	border: 1px solid #5dabeb;
 }
