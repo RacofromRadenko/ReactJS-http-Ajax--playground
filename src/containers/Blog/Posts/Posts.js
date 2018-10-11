@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Post from '../../../components/Post/Post';
 import axios from '../../../axios';
+import { Route } from 'react-router-dom';
+import FullPost from '../FullPost/FullPost';
 import classes from './Posts.css';
 
 class Posts extends Component {
@@ -30,7 +32,7 @@ class Posts extends Component {
 	}
 
 	selectPostHandler = (id) => {
-		this.props.history.push({ pathname: '/' + id });
+		this.props.history.push({ pathname: '/posts/' + id });
 	};
 
 	render() {
@@ -45,7 +47,12 @@ class Posts extends Component {
 			);
 		});
 
-		return <section className={classes.Posts}>{post}</section>;
+		return (
+			<section className={classes.Posts}>
+				{post}
+				<Route path={this.props.match.url + '/:id'} exact component={FullPost} />
+			</section>
+		);
 	}
 }
 
